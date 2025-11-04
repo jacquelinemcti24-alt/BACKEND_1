@@ -1,5 +1,5 @@
 <%- include("templates/header", {titulo:"Mostrar Contactos"})  %>
-	<table>
+	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>Nombre</th>
@@ -13,8 +13,8 @@
 				<td><%= contacto.nombre %> </td>
 				<td><%= contacto.edad %></td>
 				<td>
-					<a href="/editarContacto/<%= contacto._id %>">Editar</a>
-					<a href="/borrarContacto/<%= contacto._id %>">Borrar</a>
+					<a href="/editarContacto/<%= contacto._id %>" class="btn btn-success">Editar</a>
+					<a href="/borrarContacto/<%= contacto._id %>" class="btn btn-danger" >Borrar</a>
 				</td>
 			</tr>	
 		<% }) %>
