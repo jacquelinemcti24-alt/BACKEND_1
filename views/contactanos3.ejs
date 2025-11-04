@@ -1,0 +1,19 @@
+<%- include("templates/header", {titulo:"Contactanos"})  %>
+    <form action="" id="formulario" method="POST">
+        <div class="card" style="width: 30rem;">
+          <img style="width: 10rem;" src="https://th.bing.com/th/id/.R.14be0028c96b7a20a4d7b79ad352e15e?rik=55w4cUNNDCISmA&pid=ImgRaw&r=0&sres=1&sresct=1" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+          <input type="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+
+          <label for="exampleFormControlInput1" class="form-label">Correo</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@gmailcom">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Motivo del contacto</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <button class="btn btn-outline-primary" type="submit">Enviar</button>
+        </div>
+    </form>
+<%- include("templates/footer")  %>
