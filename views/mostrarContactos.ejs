@@ -7,18 +7,18 @@
 				<th>Modificar / Borrar</th>
 			</tr>
 
-	<tbody>
-		<% contactosMongo.forEach(contacto => { %>
-			<tr>
-				<td><%= contacto.nombre %> </td>
-				<td><%= contacto.edad %></td>
-				<td>
-					<a href="/editarContacto/<%= contacto._id %>" class="btn btn-success">Editar</a>
-					<a href="/borrarContacto/<%= contacto._id %>" class="btn btn-danger" >Borrar</a>
-				</td>
-			</tr>	
-		<% }) %>
-	</tbody>
+		<tbody>
+			<% contactosMongo.forEach((contacto) => { %>
+				<tr>
+					<td><%= contacto.nombre %> </td>
+					<td><%= contacto.edad %></td>
+					<td>
+						<a href="/editarContacto/<%= contacto._id %>" class="btn btn-success">Editar</a>
+						<a href="/borrarContacto/<%= contacto._id %>" class="btn btn-danger" >Borrar</a>
+					</td>
+				</tr>	
+			<% }) %>
+		</tbody>
 	</table>
 
 <%- include("templates/footer") %>

@@ -1,0 +1,25 @@
+<%- include("templates/header", {titulo:"aaa"})  %>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Edad</th>
+				<th>Modificar / Borrar</th>
+			</tr>
+
+	<tbody>
+		<% recibe.forEach(contacto => { %>
+			<tr>
+				<td><%= contacto.nombre %> </td>
+				<td><%= contacto.edad %></td>
+				<td>
+					<a href="/editarContacto/<%= contacto._id %>">Editar</a>
+					<a href="/borrarContacto/<%= contacto._id %>">Borrar</a>
+				</td>
+			</tr>	
+		<% }) %>
+	</tbody>
+	</table>
+
+
+<%- include("templates/footer") %>
