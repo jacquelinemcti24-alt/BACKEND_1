@@ -13,13 +13,14 @@ conexionBD()
 app.use(express.urlencoded({extended:true}))
 app.set("view engine","ejs")
 app.use("/",rutas)
-app.use(()=>{})
+
+app.set("views");
+
+const PORT= process.env.PORT ||3000
 
 app.use((req,res,next)=>{
     res.status(404).render("404")
 })
-
-const PORT= process.env.PORT ||3000
 
 app.listen(PORT, function(){
     console.log("SERVIDOR EN http://localhost:"+PORT)
